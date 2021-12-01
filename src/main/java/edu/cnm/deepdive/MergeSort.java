@@ -7,7 +7,6 @@ public class MergeSort {
   }
 
   public static void sort(int[] data, int start, int end) {
-
     if (end > start + 1) {
       // divide
       int midpoint = (start + end) / 2;
@@ -30,9 +29,9 @@ public class MergeSort {
         }
         mergedIndex++;
       }
-      if (leftIndex < midpoint) { // Items remaining in left hand side.
+      if (leftIndex < midpoint) { // Items remaining in left-hand side.
         System.arraycopy(data, leftIndex, merged, mergedIndex, midpoint - leftIndex);
-      } else { // Items remain in the right hand side; Right index is < end.
+      } else { // Items remain in the right-hand side; Right index is < end.
         System.arraycopy(data, rightIndex, merged, mergedIndex, end - rightIndex);
       }
       System.arraycopy(merged, 0, data, start, merged.length);
